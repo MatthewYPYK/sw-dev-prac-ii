@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="register.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
   <body>
@@ -32,7 +33,7 @@
         <div class="card-body">
           <h5 class="card-title">ลงทะเบียน</h5>
           <p class="card-text">สำหรับผู้ที่สนใจละทะเบียนเพื่อเช่าพื้นที่ในการจัดบูธงานมหกรรมแสดงสินค้าและการท่องเที่ยว สามารถกดลงทะเบียนเพื่อกรอกฟอร์มความต้องการได้ที่นี่</p>
-          <a href="register/register.html" class="btn btn-primary">ลงทะเบียนเข้าร่วมงาน</a>
+          <a href="register.html" class="btn btn-primary">ลงทะเบียนเข้าร่วมงาน</a>
         </div>
       </div>
     </div>
@@ -41,12 +42,12 @@
      <form>
       <div class="mb-3">
         <label class="form-label">ชื่อบริษัท</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="text" class="form-control" id="companyName" aria-describedby="emailHelp">
       </div>
       <div class="mb-3">
         <label class="form-label">ขนาดบูธ</label>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>กรุณาเลือกขนาดของบูธ</option>
+        <select class="form-select" aria-label="Default select example" id="boothSize">
+          <option selected disabled value>กรุณาเลือกขนาดของบูธ</option>
           <option value="10x10">10x10 ฟุต</option>
           <option value="10x15">10x15 ฟุต</option>
         </select>
@@ -55,22 +56,22 @@
         <div>
           <h6>ต้องการตั้งโต๊ะภายในบูธหรือไม่</h6>
         </div>
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">ต้องการ</label>
+        <input type="checkbox" class="form-check-input" id="requireTable">
+        <label class="form-check-label" for="name">ต้องการ</label>
       </div>
       <div class="mb-3">
         <label class="form-label">จำนวนเก้าอี้</label>
-        <input type="number" class="form-control" id="exampleInputPassword1">
+        <input type="number" step="1" class="form-control" id="chairCount">
       </div>
       <div class="mb-3">
         <label class="form-label">ชื่อผู้ติดต่อ</label>
-        <input type="text" class="form-control" id="exampleInputPassword1">
+        <input type="text" class="form-control" id="contactName">
       </div>
       <div class="mb-3">
         <label class="form-label">เบอร์ผู้ติดต่อ</label>
-        <input type="text" class="form-control" id="exampleInputPassword1">
+        <input type="text" class="form-control" id="contactNumber">
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-primary" onclick="inputValidation()">Submit</button>
     </form>
      </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
